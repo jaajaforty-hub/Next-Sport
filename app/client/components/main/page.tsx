@@ -17,19 +17,19 @@ interface Team {
 }
 
 
-async function getAllGames(i:number){
+async function getAllGames(i:number): Promise<Team[]>{
     const days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday']
     const teamsStore  = []
 
     for(let day of days){
-        const data = await db.query(`SELECT * FROM ${day}`)
+        const data = await db.query<Team>(`SELECT * FROM ${day}`)
         const TEAMS = data.rows
         teamsStore.push(TEAMS)
     }
     return teamsStore[i]
 }
 
-async function todayGames() : Promise<any[]>{
+async function todayGames() : Promise<Team[]>{
     const today = new Date().getDay()
     const todayGames = await getAllGames(today)
     return todayGames;
@@ -42,12 +42,12 @@ async function tomorrowGames(){
     return tomorrowGames;
 }
 
-async function getAllTeams(){
+async function getAllTeams() : Promise<Team[]>{
     const days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday']
     const teamsStore  = []
 
     for(let day of days){
-        const data = await db.query(`SELECT * FROM ${day}`)
+        const data = await db.query<Team>(`SELECT * FROM ${day}`)
         const TEAMS = data.rows
         teamsStore.push(TEAMS)
     }
@@ -85,7 +85,7 @@ export async function Table(){
 
                                     <Image 
                                         src={logo || ''}
-                                        alt={team.name}
+                                        alt={team.team_name?? "Team logo"}
                                         width={100}
                                         height={100}
                                         className="rounded-full h-8 w-8 ml-5 mt-5 border border-gray-100 "
@@ -143,7 +143,7 @@ async function Today(){
                         <div className="flex flex-col ">
                             <Image 
                                 src={logo || ''}
-                                alt={team.name}
+                                alt={team.team_name?? "Team logo"}
                                 width={100}
                                 height={100}
                                 className="rounded-full h-15 w-15 flex justify-center mt-5 border border-orange-100 "
@@ -197,7 +197,7 @@ async function Tomorrow(){
                             <div className="flex flex-col ">
                                 <Image 
                                     src={logo || ''}
-                                    alt={team.name}
+                                    alt={team.team_name?? "Team logo"}
                                     width={100}
                                     height={100}
                                     className="rounded-full h-15 w-15 flex justify-center mt-5 border border-orange-100 "
