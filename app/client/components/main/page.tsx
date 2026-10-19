@@ -91,7 +91,7 @@ export async function Table(){
                                         className="rounded-full h-8 w-8 ml-5 mt-5 border border-gray-100 "
                                 
                                     />
-                                    <div className="ml-3 mt-7 text-[12px] font-bold " key={team.id}>{team.name}</div>
+                                    <div className="ml-3 mt-7 text-[12px] font-bold " key={team.id}>{team.team_name}</div>
                                     <div className="ml-7 mt-7 text-[12px]" key={team.id}>{team.country}</div>
                                     <div className="ml-9 mt-7 text-[12px] font-bold text-green-500" key={team.id}>{team.odd}</div>
                                     <div className="ml-3 mt-7 text-[12px]" key={team.id}>{team.time}</div>
