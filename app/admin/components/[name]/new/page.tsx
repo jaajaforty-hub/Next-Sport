@@ -1,4 +1,4 @@
-import db  from "@/db/db"
+import {db}  from "@/db/db"
 import UpdateGamesOfDay from "../updata-team-form/page"
 
 
