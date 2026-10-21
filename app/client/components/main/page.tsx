@@ -138,7 +138,7 @@ async function Today(){
             {
                 teamsAndGames.map(team=>{
                     const logo = logoToString(team.logo)
-                    return <div className="flex  justify-around bg-gray-900 border w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} >
+                    return <div className="flex  justify-around bg-gray-900 w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} >
 
                         <div className="flex flex-col ">
                             <Image 
@@ -192,7 +192,7 @@ async function Tomorrow(){
                 {
                     teamsAndGames.map(team=>{
                          const logo = logoToString(team.logo)
-                    return <div className="flex  justify-around bg-gray-900 border w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} >
+                    return <div className="flex  justify-around bg-gray-900 w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} >
 
                         <div className="flex flex-col ">
                             <Image 
