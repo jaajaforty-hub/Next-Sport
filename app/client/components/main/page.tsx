@@ -200,7 +200,7 @@ async function Tomorrow(){
                                 alt={team.team_name?? "Team logo"}
                                 width={100}
                                 height={100}
-                                className="rounded-full h-15 w-15 flex justify-center mt-5 border border-orange-100 "
+                                className="rounded-full h-15 w-15 flex justify-center mt-5 "
                             
                             />
                             <div className="font-bold text-orange-400 mt-2">{team.team_name}</div>
