@@ -15,7 +15,7 @@ export default function Register(){
     return <> 
 
         <NotRegister />
-        <div className="flex justify-center w-sreen h-screen bg-gradient-to-r from-gray-900 to-gray-700 ">
+        <div className="flex justify-center w-sreen h-[100vh] bg-gradient-to-r from-gray-900 to-gray-700 ">
 
             <div className="flex flex-col gap-20 w-[40%] ml-40 mt-25 ">
             
@@ -63,7 +63,7 @@ export default function Register(){
                     </TextField>
 
                     <TextField isInvalid={!!status.errors?.adminID} className="flex flex-col gap-3 ">
-                        <label htmlFor="userID" className="text-orange-300 mt-5" >Admim ID</label>
+                        <label htmlFor="userID" className="text-orange-300 mt-5" >Admim Key</label>
                         <Input 
                             type="password"
                             name="admin-id"
