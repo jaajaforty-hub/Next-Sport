@@ -19,7 +19,7 @@ export default function Register(){
 
             <div className="flex flex-col gap-15 w-[40%] ml-40 mt-25 ">
             
-                <div className="flex justify-center font-bold text-orange-300 text-[80px] mt-10 border-b pb-2 pl-3 w-[70%] ml-30 border-orange-300"  >Admin Register</div>    
+                <div className="flex justify-center font-bold text-orange-300 text-[70px] mt-10 border-b pb-2 pl-3 w-[70%] ml-30 border-orange-300"  >Admin Register</div>    
     
                 <form action={register} className="flex flex-col text-orange-300 ml-15 h-auto w-[100%]">
 
