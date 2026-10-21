@@ -88,7 +88,7 @@ export async function Table(){
                                         alt={team.team_name?? "Team logo"}
                                         width={100}
                                         height={100}
-                                        className="rounded-full h-8 w-8 ml-5 mt-5 border border-gray-100 "
+                                        className="rounded-full h-8 w-8 ml-5 mt-5 "
                                 
                                     />
                                     <div className="ml-3 mt-7 text-[12px] font-bold " key={team.id}>{team.team_name}</div>
@@ -146,7 +146,7 @@ async function Today(){
                                 alt={team.team_name?? "Team logo"}
                                 width={100}
                                 height={100}
-                                className="rounded-full h-15 w-15 flex justify-center mt-5 border border-orange-100 "
+                                className="rounded-full h-15 w-15 flex justify-center mt-5 "
                             
                             />
                             <div className="font-bold text-orange-400 mt-2">{team.team_name}</div>
