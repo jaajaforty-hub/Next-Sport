@@ -191,33 +191,33 @@ async function Tomorrow(){
                <div className="flex flex-wrap justify-evenly bg-gray-800 rounded gap-10 ml-20 h-auto w-[90%]  min-h-[35%]" >
                 {
                     teamsAndGames.map(team=>{
-                        const logo = logoToString(team.logo)
-                        return <div className="flex  justify-around bg-gray-900 border w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} >
+                         const logo = logoToString(team.logo)
+                    return <div className="flex  justify-around bg-gray-900 border w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} >
 
-                            <div className="flex flex-col ">
-                                <Image 
-                                    src={logo || ''}
-                                    alt={team.team_name?? "Team logo"}
-                                    width={100}
-                                    height={100}
-                                    className="rounded-full h-15 w-15 flex justify-center mt-5 border border-orange-100 "
-                                
-                                />
-                                <div className="font-bold text-orange-400 mt-2">{team.team_name}</div>
-                            </div>
-
-                            <div className="flex flex-col justify-between gap-1 text-gray-100">
-                               
-                                <div className="font-light text-sm flex wrap">Country : {team.country}</div> 
-                                 <div className="rounded-full w-10 h-10 flex wrap justify-center pt-2 bg-green-200 font-bold text-gray-900">{team.odd}</div>                                  
-                                <div className="font-light text-sm flex wrap">Time : {team.time}</div>
-                               
-                            </div>
+                        <div className="flex flex-col ">
+                            <Image 
+                                src={logo || ''}
+                                alt={team.team_name?? "Team logo"}
+                                width={100}
+                                height={100}
+                                className="rounded-full h-15 w-15 flex justify-center mt-5 border border-orange-100 "
                             
+                            />
+                            <div className="font-bold text-orange-400 mt-2">{team.team_name}</div>
+                        </div>
 
-                         
+                        <div className="flex flex-col justify-between gap-1  text-gray-100">
+                            
+                            <div className="font-light text-sm ">{team.country}</div>
+                            <div className="rounded-full w-10 h-10 flex justify-center pt-2 bg-green-200 font-bold text-gray-900">{team.odd}</div>                                   
+                            <div className="font-light text-sm ">{team.time}</div>
                             
                         </div>
+                        
+
+                        
+                        
+                    </div>
                     })
                 }
                 </div>
