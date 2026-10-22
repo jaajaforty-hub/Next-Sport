@@ -86,7 +86,7 @@ export async function Table(){
                                     <Image 
                                         src={logo || ''}
                                         alt={team.team_name?? "Team logo"}
-                                        width={70}
+                                        width={80}
                                         height={80}
                                         className="rounded-full h-8 w-8 ml-5 mt-5 "
                                 
@@ -130,7 +130,7 @@ async function Today(){
                 <div className="mx-20 my-10 border w-80 bg-gray-800 p-3 rounded-lg">
                     <div className="text-[25px] text-orange-100 ">Games of the day</div>
                     <div className="text-[12px] text-orange-100 mt-1 ">
-                        {days[new Date().getDay() ]} : {new Date().getMonth() + 1 } /
+                        {days[new Date().getDay() ] - 1} : {new Date().getMonth() + 1 } /
                         {new Date().getUTCDate() - 1 } / {new Date().getFullYear()}
                     </div>
                 </div>
@@ -143,15 +143,15 @@ async function Today(){
             {
                 teamsAndGames.map(team=>{
                     const logo = logoToString(team.logo)
-                    return <div className="flex  justify-around bg-gray-900 w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} h-80 >
+                    return <div className="flex  justify-around bg-gray-900 w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} h-50 >
 
                         <div className="flex flex-col ">
                             <Image 
                                 src={logo || ''}
                                 alt={team.team_name?? "Team logo"}
-                                width={80}
-                                height={80}
-                                className="rounded-full h-15 w-15 flex justify-center mt-5 h-10 w-10 "
+                                width={60}
+                                height={60}
+                                className="rounded-full h-15 w-15 flex justify-center mt-5  "
                             
                             />
                             <div className="font-bold text-orange-400 mt-2">{team.team_name}</div>
@@ -189,7 +189,7 @@ async function Tomorrow(){
                 <div className="mx-20 my-10 border w-80 bg-gray-800 p-3 rounded-lg">
                     <div className="text-[25px] text-orange-100 ">Games of the day</div>
                     <div className="text-[12px] text-orange-100 mt-1 ">
-                        {days[new Date().getDay() + 1]} : {new Date().getMonth() + 1 } /
+                        {days[new Date().getDay() ]} : {new Date().getMonth() + 1 } /
                         {new Date().getUTCDate() } / {new Date().getFullYear()}
                     </div>
                 </div>
@@ -202,14 +202,14 @@ async function Tomorrow(){
                 {
                     teamsAndGames.map(team=>{
                          const logo = logoToString(team.logo)
-                    return <div className="flex  justify-around bg-gray-900 w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} >
+                    return <div className="flex  justify-around bg-gray-900 w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} h-50>
 
                         <div className="flex flex-col ">
                             <Image 
                                 src={logo || ''}
                                 alt={team.team_name?? "Team logo"}
-                                width={100}
-                                height={100}
+                                width={60}
+                                height={60}
                                 className="rounded-full h-15 w-15 flex justify-center mt-5 "
                             
                             />
