@@ -81,12 +81,12 @@ export async function Table(){
                         teams.map(team=>{
                             const logo = logoToString(team.logo)
                             return (
-                                <div key={team.id} className="flex justify-between pr-5   rounded w-[99%]  mb-5 pb-2 bg-gray-800">
+                                <div key={team.id} className="flex justify-between pr-5   rounded w-[99%]  mb-5 pb-2 bg-gray-800 h-100">
 
                                     <Image 
                                         src={logo || ''}
                                         alt={team.team_name?? "Team logo"}
-                                        width={80}
+                                        width={70}
                                         height={80}
                                         className="rounded-full h-8 w-8 ml-5 mt-5 "
                                 
