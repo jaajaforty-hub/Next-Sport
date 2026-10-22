@@ -6,7 +6,6 @@ export const db = new pg.Pool({
   ssl: { rejectUnauthorized: false },
 });
 
-
 // export async function initDb() {
 //   try {
 

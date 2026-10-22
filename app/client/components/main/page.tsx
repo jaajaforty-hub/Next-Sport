@@ -86,8 +86,13 @@ export async function Table(){
                                     <Image 
                                         src={logo || ''}
                                         alt={team.team_name?? "Team logo"}
+<<<<<<< HEAD
                                         width={100}
                                         height={100}
+=======
+                                        width={80}
+                                        height={80}
+>>>>>>> 8927ab4d2f1648d1a16bc19d3a344942a1c56cc8
                                         className="rounded-full h-8 w-8 ml-5 mt-5 "
                                 
                                     />
@@ -112,8 +117,13 @@ function Adverts(){
         
     return(
         <div className="flex flex-col  w-[100%] h-auto pb-5 bg-gray-900  rounded-lg">              
+<<<<<<< HEAD
             <div  className="font-bold text-[60px] text-green-200 t mx-10 ">Hello...</div>
             <div  className="flex flex-wrap font-bold text-[30px] font-light text-orange-200 mx-10"> Here! Get All Soccer Wins... </div>  
+=======
+            <div  className="font-bold text-[60px] text-orange-300 t mx-10 ">Hello...</div>
+            <div  className="flex flex-wrap font-bold text-[30px] font-light text-green-100 mx-10"> Here! Get All Soccer Wins... </div>  
+>>>>>>> 8927ab4d2f1648d1a16bc19d3a344942a1c56cc8
         </div>
     )
 }
@@ -128,6 +138,7 @@ async function Today(){
 
             <div className="flex justify-between">
                 <div className="mx-20 my-10 border w-80 bg-gray-800 p-3 rounded-lg">
+<<<<<<< HEAD
                     <div className="text-[25px] text-green-100 ">Today's Games</div>
                     <div className="text-[12px] text-orange-100 mt-1 ">
                         {days[new Date().getDay() ]} : {new Date().getMonth() + 1 } /
@@ -139,20 +150,42 @@ async function Today(){
                 </div>
             </div>        
             
+=======
+                    <div className="text-[25px] text-orange-100 ">Games of the day</div>
+                    <div className="text-[12px] text-orange-100 mt-1 ">
+                        {days[new Date().getDay() ] - 1} : {new Date().getMonth() + 1 } /
+                        {new Date().getUTCDate() - 1 } / {new Date().getFullYear()}
+                    </div>
+                </div>
+                <div className="flex flex-wrap justify-center text-orange-200 text-[40px] mt-10 mr-10">
+                    {days[new Date().getDay() ]} : {new Date().getUTCDate() - 1} 
+                </div>
+            </div>  
+>>>>>>> 8927ab4d2f1648d1a16bc19d3a344942a1c56cc8
 
             <div className="flex flex-wrap justify-evenly p-10 bg-gray-800 rounded gap-10 ml-20 h-auto w-[90%]  min-h-[35%]" >
             {
                 teamsAndGames.map(team=>{
                     const logo = logoToString(team.logo)
+<<<<<<< HEAD
                     return <div className="flex  justify-around bg-gray-900 w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} >
+=======
+                    return <div className="flex  justify-around bg-gray-900 w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} h-50 >
+>>>>>>> 8927ab4d2f1648d1a16bc19d3a344942a1c56cc8
 
                         <div className="flex flex-col ">
                             <Image 
                                 src={logo || ''}
                                 alt={team.team_name?? "Team logo"}
+<<<<<<< HEAD
                                 width={70}
                                 height={70}
                                 className="rounded-full h-12 w-12 flex justify-center mt-5 "
+=======
+                                width={60}
+                                height={60}
+                                className="rounded-full h-15 w-15 flex justify-center mt-5  "
+>>>>>>> 8927ab4d2f1648d1a16bc19d3a344942a1c56cc8
                             
                             />
                             <div className="font-bold text-orange-400 mt-2">{team.team_name}</div>
@@ -184,6 +217,7 @@ async function Tomorrow(){
 
     const days = ["Sunday", "Monday", "Tuesday","Wednesday","Thurday","Friday","Saturday"] 
 
+<<<<<<< HEAD
     return (
         <div className="flex flex-col flex-wrap bg-gray-900 shadow-md border  pb-15 w-[100%] h-auto rounded-lg">
 
@@ -206,27 +240,73 @@ async function Tomorrow(){
                 teamsAndGames.map(team=>{
                     const logo = logoToString(team.logo)
                     return <div className="flex  justify-around bg-gray-900 w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} >
+=======
+        return (
+             <div className="flex flex-col flex-wrap bg-gray-900 shadow-md border  pb-15 w-[100%] h-auto rounded-lg">
+
+            <div className="flex justify-between">
+                <div className="mx-20 my-10 border w-80 bg-gray-800 p-3 rounded-lg">
+                    <div className="text-[25px] text-orange-100 ">Games of the day</div>
+                    <div className="text-[12px] text-orange-100 mt-1 ">
+                        {days[new Date().getDay() ]} : {new Date().getMonth() + 1 } /
+                        {new Date().getUTCDate() } / {new Date().getFullYear()}
+                    </div>
+                </div>
+                <div className="flex flex-wrap justify-center text-orange-200 text-[40px] mt-10 mr-12">
+                    {days[new Date().getDay() ]} : {new Date().getUTCDate() } 
+                </div>
+            </div>  
+
+               <div className="flex flex-wrap justify-evenly p-10 bg-gray-800 rounded gap-10 ml-20 h-auto w-[90%]  min-h-[35%]" >
+                {
+                    teamsAndGames.map(team=>{
+                         const logo = logoToString(team.logo)
+                    return <div className="flex  justify-around bg-gray-900 w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} h-50>
+>>>>>>> 8927ab4d2f1648d1a16bc19d3a344942a1c56cc8
 
                         <div className="flex flex-col ">
                             <Image 
                                 src={logo || ''}
                                 alt={team.team_name?? "Team logo"}
+<<<<<<< HEAD
                                 width={70}
                                 height={70}
                                 className="rounded-full h-12 w-12 flex justify-center mt-5 "
+=======
+                                width={60}
+                                height={60}
+                                className="rounded-full h-15 w-15 flex justify-center mt-5 "
+>>>>>>> 8927ab4d2f1648d1a16bc19d3a344942a1c56cc8
                             
                             />
                             <div className="font-bold text-orange-400 mt-2">{team.team_name}</div>
                         </div>
 
+<<<<<<< HEAD
                         <div className="flex flex-col justify-between text-gray-100">
                             
                             <div className="font-light text-sm font-bold">{team.country}</div>
                             <div className="rflex justify-center pt-2  font-bold text-green-600">{team.odd}</div>                                   
+=======
+                        <div className="flex flex-col justify-between gap-1  text-gray-100">
+                            
+                            <div className="font-light text-sm ">{team.country}</div>
+                            <div className="rounded-full w-10 h-10 flex justify-center pt-2 bg-green-200 font-bold text-gray-900">{team.odd}</div>                                   
+>>>>>>> 8927ab4d2f1648d1a16bc19d3a344942a1c56cc8
                             <div className="font-light text-sm ">{team.time}</div>
                             
                         </div>
                         
+<<<<<<< HEAD
+=======
+
+                        
+                        
+                    </div>
+                    })
+                }
+                </div>
+>>>>>>> 8927ab4d2f1648d1a16bc19d3a344942a1c56cc8
 
                         
                         

@@ -17,9 +17,9 @@ export default function Register(){
         <NotRegister />
         <div className="flex justify-center w-sreen h-screen bg-gradient-to-r from-gray-900 to-gray-700 ">
 
-            <div className="flex flex-col gap-20 w-[40%] ml-40 mt-25 ">
+            <div className="flex flex-col gap-15 w-[40%] ml-40 mt-25 ">
             
-                <div className="flex justify-center font-bold text-orange-300 text-[80px] mt-10 border-b pb-2 pl-3 w-[70%] ml-30 border-orange-300"  >Admin Register</div>    
+                <div className="flex justify-center font-bold text-orange-300 text-[70px] mt-10 border-b pb-2 pl-3 w-[70%] ml-30 border-orange-300"  >Admin Register</div>    
     
                 <form action={register} className="flex flex-col text-orange-300 ml-15 h-auto w-[100%]">
 
@@ -63,7 +63,7 @@ export default function Register(){
                     </TextField>
 
                     <TextField isInvalid={!!status.errors?.adminID} className="flex flex-col gap-3 ">
-                        <label htmlFor="userID" className="text-orange-300 mt-5" >Admim ID</label>
+                        <label htmlFor="userID" className="text-orange-300 mt-5" >Admim Key</label>
                         <Input 
                             type="password"
                             name="admin-id"
@@ -83,7 +83,7 @@ export default function Register(){
 
                     </TextField>
                     
-                    <button className="flex justify-center ml-25 mt-15 border  w-full lg:w-[50%] rounded-lg bg-green-300 text-[15px]  text-gray-900 font-bold p-3 hover:text-[16px]">{isPading? "Login.." : "Login"} </button>
+                    <button className="flex justify-center ml-25 mt-10 mb-10 border  w-full lg:w-[50%] rounded-lg bg-green-300 text-[15px]  text-gray-900 font-bold p-3 hover:text-[16px]">{isPading? "Login.." : "Login"} </button>
                     
 
                 </form>  
