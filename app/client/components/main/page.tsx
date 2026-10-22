@@ -86,8 +86,8 @@ export async function Table(){
                                     <Image 
                                         src={logo || ''}
                                         alt={team.team_name?? "Team logo"}
-                                        width={100}
-                                        height={100}
+                                        width={80}
+                                        height={80}
                                         className="rounded-full h-8 w-8 ml-5 mt-5 "
                                 
                                     />
@@ -149,8 +149,8 @@ async function Today(){
                             <Image 
                                 src={logo || ''}
                                 alt={team.team_name?? "Team logo"}
-                                width={100}
-                                height={100}
+                                width={80}
+                                height={80}
                                 className="rounded-full h-15 w-15 flex justify-center mt-5 "
                             
                             />
