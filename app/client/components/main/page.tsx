@@ -81,14 +81,14 @@ export async function Table(){
                         teams.map(team=>{
                             const logo = logoToString(team.logo)
                             return (
-                                <div key={team.id} className="flex justify-between pr-5   rounded w-[99%]  mb-5 pb-2 bg-gray-800 h-80">
+                                <div key={team.id} className="flex justify-between pr-5   rounded w-[99%]  mb-5 pb-2 bg-gray-800">
 
                                     <Image 
                                         src={logo || ''}
                                         alt={team.team_name?? "Team logo"}
                                         width={70}
                                         height={80}
-                                        className="rounded-full h-8 w-8 ml-5 mt-5 w-80 h-80 "
+                                        className="rounded-full h-8 w-8 ml-5 mt-5 "
                                 
                                     />
                                     <div className="ml-3 mt-7 text-[12px] font-bold " key={team.id}>{team.team_name}</div>
@@ -143,7 +143,7 @@ async function Today(){
             {
                 teamsAndGames.map(team=>{
                     const logo = logoToString(team.logo)
-                    return <div className="flex  justify-around bg-gray-900 w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} h-100 >
+                    return <div className="flex  justify-around bg-gray-900 w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} h-80 >
 
                         <div className="flex flex-col ">
                             <Image 
@@ -151,7 +151,7 @@ async function Today(){
                                 alt={team.team_name?? "Team logo"}
                                 width={80}
                                 height={80}
-                                className="rounded-full h-15 w-15 flex justify-center mt-5 "
+                                className="rounded-full h-15 w-15 flex justify-center mt-5 h-10 w-10 "
                             
                             />
                             <div className="font-bold text-orange-400 mt-2">{team.team_name}</div>
