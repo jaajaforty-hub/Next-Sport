@@ -113,7 +113,7 @@ function Adverts(){
     return(
         <div className="flex flex-col  w-[100%] h-auto pb-5 bg-gray-900  rounded-lg">              
             <div  className="font-bold text-[60px] text-orange-300 t mx-10 ">Hello...</div>
-            <div  className="flex flex-wrap font-bold text-[30px] font-light text-orange-100 mx-10"> Here! Get All Soccer Wins... </div>  
+            <div  className="flex flex-wrap font-bold text-[30px] font-light text-green-100 mx-10"> Here! Get All Soccer Wins... </div>  
         </div>
     )
 }
@@ -143,7 +143,7 @@ async function Today(){
             {
                 teamsAndGames.map(team=>{
                     const logo = logoToString(team.logo)
-                    return <div className="flex  justify-around bg-gray-900 w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} >
+                    return <div className="flex  justify-around bg-gray-900 w-[20%] my-5 shadow-sm shadow-gray-500 text-orange-100 p-5 rounded-lg " key={team.id} h-100 >
 
                         <div className="flex flex-col ">
                             <Image 
