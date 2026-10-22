@@ -134,7 +134,7 @@ async function Today(){
                         {new Date().getUTCDate() - 1 } / {new Date().getFullYear()}
                     </div>
                 </div>
-                <div className="flex flex-wrap justify-center text-orange-200 text-[40px] mt-10 mr-12">
+                <div className="flex flex-wrap justify-center text-orange-200 text-[40px] mt-10 mr-10">
                     {days[new Date().getDay() ]} : {new Date().getUTCDate() - 1} 
                 </div>
             </div>  
