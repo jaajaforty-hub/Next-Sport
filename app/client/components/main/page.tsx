@@ -130,12 +130,12 @@ async function Today(){
                 <div className="mx-20 my-10 border w-80 bg-gray-800 p-3 rounded-lg">
                     <div className="text-[25px] text-green-100 ">Today's Games</div>
                     <div className="text-[12px] text-orange-100 mt-1 ">
-                        {days[new Date().getDay() ]} : {new Date().getMonth() + 1 } /
+                        {days[new Date().getDay() -1 ]} : {new Date().getMonth() + 1 } /
                         {new Date().getUTCDate() -1}/ {new Date().getFullYear()}
                     </div>
                 </div>
                 <div className="flex flex-wrap justify-center text-orange-200 text-[40px] mt-10 mr-12">
-                    {days[new Date().getDay() ]} : {new Date().getUTCDate() -1} 
+                    {days[new Date().getDay()-1]} : {new Date().getUTCDate() -1} 
                 </div>
             </div>        
             
@@ -191,12 +191,12 @@ async function Tomorrow(){
                 <div className="mx-20 my-10 border w-80 bg-gray-800 p-3 rounded-lg">
                     <div className="text-[25px] text-green-100 ">Tomorrow's Games</div>
                     <div className="text-[12px] text-orange-100 mt-1 ">
-                        {days[new Date().getDay() + 1 ]} : {new Date().getMonth() + 1 } /
+                        {days[new Date().getDay() ]} : {new Date().getMonth() + 1 } /
                         {new Date().getUTCDate()}/ {new Date().getFullYear()}
                     </div>
                 </div>
                 <div className="flex flex-wrap justify-center text-orange-200 text-[40px] mt-10 mr-12">
-                    {days[new Date().getDay() + 1]} : {new Date().getUTCDate() } 
+                    {days[new Date().getDay() ]} : {new Date().getUTCDate() } 
                 </div>
             </div>        
             
