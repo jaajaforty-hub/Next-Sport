@@ -125,16 +125,21 @@ async function Today(){
 
     return (
         <div className="flex flex-col flex-wrap bg-gray-900 shadow-md border  pb-15 w-[100%] h-auto rounded-lg">
-                    
-            <div className="mx-20 my-10 border w-80 bg-gray-800 p-3 rounded-lg">
-                <div className="text-[25px] text-orange-100 ">Games of the day</div>
-                <div className="text-[12px] text-orange-100 mt-1 ">
-                    {days[new Date().getDay() ]} : {new Date().getMonth() + 1} /
-                    {new Date().getUTCDate() } / {new Date().getFullYear()}
-                </div>
-            </div>
 
-            <div className="flex flex-wrap justify-evenly bg-gray-800 rounded gap-10 ml-20 h-auto w-[90%]  min-h-[35%]" >
+            <div className="flex justify-between">
+                <div className="mx-20 my-10 border w-80 bg-gray-800 p-3 rounded-lg">
+                    <div className="text-[25px] text-orange-100 ">Games of the day</div>
+                    <div className="text-[12px] text-orange-100 mt-1 ">
+                        {days[new Date().getDay() ]} : {new Date().getMonth() + 1 } /
+                        {new Date().getUTCDate() } / {new Date().getFullYear()}
+                    </div>
+                </div>
+                <div className="flex flex-wrap justify-center text-orange-200 text-[40px] mt-10 mr-12">
+                    {days[new Date().getDay() ]} : {new Date().getUTCDate() } 
+                </div>
+            </div>  
+
+            <div className="flex flex-wrap justify-evenly p-10 bg-gray-800 rounded gap-10 ml-20 h-auto w-[90%]  min-h-[35%]" >
             {
                 teamsAndGames.map(team=>{
                     const logo = logoToString(team.logo)
@@ -178,17 +183,22 @@ async function Tomorrow(){
         const days = ["Sunday", "Monday", "Tuesday","Wednesday","Thurday","Friday","Saturday"] 
 
         return (
-            <div className="flex flex-col flex-wrap bg-gray-900 shadow-md border  pb-15 w-[100%] h-auto rounded-lg">
-                      
+             <div className="flex flex-col flex-wrap bg-gray-900 shadow-md border  pb-15 w-[100%] h-auto rounded-lg">
+
+            <div className="flex justify-between">
                 <div className="mx-20 my-10 border w-80 bg-gray-800 p-3 rounded-lg">
-                    <div className="text-[25px] text-orange-100 ">Tomorrow's games</div>
-                    <div className="text-[12px] text-orange-100 mt-1">
-                        {days[new Date().getDay() + 1]} : {new Date().getMonth() + 1} /
-                        {new Date().getUTCDate() + 1} / {new Date().getFullYear()}
+                    <div className="text-[25px] text-orange-100 ">Games of the day</div>
+                    <div className="text-[12px] text-orange-100 mt-1 ">
+                        {days[new Date().getDay() + 1]} : {new Date().getMonth() + 1 } /
+                        {new Date().getUTCDate() + 1 } / {new Date().getFullYear()}
                     </div>
                 </div>
+                <div className="flex flex-wrap justify-center text-orange-200 text-[40px] mt-10 mr-12">
+                    {days[new Date().getDay() + 1 ]} : {new Date().getUTCDate() } 
+                </div>
+            </div>  
 
-               <div className="flex flex-wrap justify-evenly bg-gray-800 rounded gap-10 ml-20 h-auto w-[90%]  min-h-[35%]" >
+               <div className="flex flex-wrap justify-evenly p-10 bg-gray-800 rounded gap-10 ml-20 h-auto w-[90%]  min-h-[35%]" >
                 {
                     teamsAndGames.map(team=>{
                          const logo = logoToString(team.logo)
