@@ -132,12 +132,12 @@ async function Today(){
                 <div className="ml-20  w-80 bg-gray-800 p-3 rounded-lg opacity-60 ">
                     <div className="text-[25px] text-green-300 opacity-80 font-bold">Today's Games</div>
                     <div className="text-[12px] text-orange-100 mt-1 ">
-                        {days[new Date().getDay() -1 ]} : {new Date().getMonth() + 1 } /
-                        {new Date().getUTCDate() -1}/ {new Date().getFullYear()}
+                        {days[new Date().getDay()  ]} : {new Date().getMonth() + 1 } /
+                        {new Date().getUTCDate() }/ {new Date().getFullYear()}
                     </div>
                 </div>
                 <div className="text-orange-200 opacity-60 font-bold text-[30px] mr-18 sm:ml-20">
-                    {days[new Date().getDay()-1]} : {new Date().getUTCDate() -1} 
+                    {days[new Date().getDay()]} : {new Date().getUTCDate() } 
                 </div>
                 
             </div>        
@@ -193,12 +193,12 @@ async function Tomorrow(){
                 <div className="ml-20  w-80 bg-gray-800 p-3 rounded-lg opacity-60 ">
                     <div className="text-[25px] text-green-300 opacity-80 font-bold">Tomorrow's Games</div>
                     <div className="text-[12px] text-orange-100 mt-1 ">
-                        {days[new Date().getDay() ]} : {new Date().getMonth() + 1 } /
-                        {new Date().getUTCDate() }/ {new Date().getFullYear()}
+                        {days[new Date().getDay() +1 ]} : {new Date().getMonth() + 1 } /
+                        {new Date().getUTCDate() +1 }/ {new Date().getFullYear()}
                     </div>
                 </div>
                 <div className="text-orange-200 opacity-60 font-bold text-[30px] mr-18 sm:ml-20">
-                    {days[new Date().getDay()]} : {new Date().getUTCDate() } 
+                    {days[new Date().getDay() +1]} : {new Date().getUTCDate() +1 } 
                 </div>
                 
             </div>        
