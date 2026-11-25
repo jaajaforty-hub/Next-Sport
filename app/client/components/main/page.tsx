@@ -149,7 +149,7 @@ async function Today(){
                     const logo = logoToString(team.logo)
                     return <div className="flex flex-wrap  justify-between bg-gray-900 w-[20%] my-1 shadow-sm shadow-gray-700 text-orange-100 p-2 rounded-lg " key={team.id} >
 
-                        <div className="flex flex-col ">
+                        <div className="flex flex-col ml-2">
                             <Image 
                                 src={logo || ''}
                                 alt={team.team_name?? "Team logo"}
@@ -161,7 +161,7 @@ async function Today(){
                             <div className="font-bold text-orange-400 mt-2">{team.team_name}</div>
                         </div>
 
-                        <div className="flex flex-col justify-between text-gray-100">
+                        <div className="flex flex-col justify-between text-gray-100 mr-2">
                             
                             <div className="font-light text-sm font-bold">{team.country}</div>
                             <div className="rflex justify-center pt-2  font-bold text-green-600">{team.odd}</div>                                   
@@ -210,7 +210,7 @@ async function Tomorrow(){
                     const logo = logoToString(team.logo)
                     return <div className="flex flex-wrap  justify-between bg-gray-900 w-[20%] my-1 shadow-sm shadow-gray-700 text-orange-100 p-2 rounded-lg " key={team.id}  >
 
-                        <div className="flex flex-col ">
+                        <div className="flex flex-col ml-2">
                             <Image 
                                 src={logo || ''}
                                 alt={team.team_name?? "Team logo"}
@@ -222,7 +222,7 @@ async function Tomorrow(){
                             <div className="font-bold text-orange-400 mt-2">{team.team_name}</div>
                         </div>
 
-                        <div className="flex flex-col justify-between text-gray-100">
+                        <div className="flex flex-col justify-between text-gray-100 mr-2">
                             
                             <div className="font-light text-sm font-bold">{team.country}</div>
                             <div className="rflex justify-center pt-2  font-bold text-green-600">{team.odd}</div>                                   
