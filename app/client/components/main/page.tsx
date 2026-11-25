@@ -205,10 +205,10 @@ async function Tomorrow(){
             
 
             <div className="flex flex-wrap justify-evenly p-10 bg-gray-800 rounded gap-10 ml-20 h-auto w-[90%]  " >
-            {
+           {
                 teamsAndGames.map(team=>{
                     const logo = logoToString(team.logo)
-                    return <div className="flex flex-wrap  justify-between bg-gray-900 w-[20%] my-1 shadow-sm shadow-gray-700 text-orange-100 p-2 rounded-lg " key={team.id}  >
+                    return <div className="flex flex-wrap  justify-between bg-gray-900 w-[20%] my-1 shadow-sm shadow-gray-700 text-orange-100 p-2 rounded-lg " key={team.id} >
 
                         <div className="flex flex-col ml-2">
                             <Image 
